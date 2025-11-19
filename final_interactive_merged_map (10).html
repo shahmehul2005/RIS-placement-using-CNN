@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_427b47f53bcaa95d220405d7005fc149 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            top: 50px; right: 50px; width: 200px; height: auto; 
+            background-color: rgba(255, 255, 255, 0.9); border:2px solid grey; z-index:9999;
+            font-family: Arial, sans-serif; font-size: 14px;
+            padding: 10px; border-radius: 5px;">
+<b>Legend</b><br>
+<i style="background:red; border:1px solid #777; width:18px; height:18px; float:left; margin-right:8px; opacity: 0.7;"></i> Building<br></div>
+    
+            <div class="folium-map" id="map_427b47f53bcaa95d220405d7005fc149" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_427b47f53bcaa95d220405d7005fc149 = L.map(
+                "map_427b47f53bcaa95d220405d7005fc149",
+                {
+                    center: [26.934284, 75.922748],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 18,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_93c27686bd9a505af9f338a4c0e0f822 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_93c27686bd9a505af9f338a4c0e0f822.addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+            var polygon_c018c6cfdfb6345572e0aaac9f4d94d4 = L.polygon(
+                [[26.932381236694802, 75.9223182366984], [26.932133787533328, 75.9223182366984], [26.932132587623396, 75.92225122565105], [26.932037692068864, 75.92225122565105], [26.93203648955969, 75.9223182366984], [26.931947600051743, 75.9223182366984], [26.931947592691873, 75.92267071480745], [26.932381229334933, 75.92267071480745]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_49a8a37f8a6c928bbda4c97be1f1dc7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da2898f1606f18a71e05a0cfd634e0e1 = $(`<div id="html_da2898f1606f18a71e05a0cfd634e0e1" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_49a8a37f8a6c928bbda4c97be1f1dc7f.setContent(html_da2898f1606f18a71e05a0cfd634e0e1);
+            
+        
+
+        polygon_c018c6cfdfb6345572e0aaac9f4d94d4.bindPopup(popup_49a8a37f8a6c928bbda4c97be1f1dc7f)
+        ;
+
+        
+    
+    
+            var polygon_05e97020bb331b8fd4411fd843e2c26f = L.polygon(
+                [[26.93255420197178, 75.92273906607575], [26.932328374587584, 75.92273906607575], [26.93232717328709, 75.92274308673858], [26.932297143049283, 75.92274308673858], [26.932297137576484, 75.92297628518332], [26.932327167814293, 75.92297628518332], [26.93232836889345, 75.9229816460671], [26.93233077127985, 75.92298298628805], [26.93233076740983, 75.92313845191786], [26.932335572247865, 75.92313845191786], [26.932336773355026, 75.92314247258071], [26.932473711237623, 75.92314247258071], [26.932473715210005, 75.92298298628805], [26.932554196277646, 75.9229816460671]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_c68679475ff85e1d97a404f0a6ee186d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_941dda385ba39297445d8d4b7f7d19da = $(`<div id="html_941dda385ba39297445d8d4b7f7d19da" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_c68679475ff85e1d97a404f0a6ee186d.setContent(html_941dda385ba39297445d8d4b7f7d19da);
+            
+        
+
+        polygon_05e97020bb331b8fd4411fd843e2c26f.bindPopup(popup_c68679475ff85e1d97a404f0a6ee186d)
+        ;
+
+        
+    
+    
+            var polygon_4af79be20d5c61bfe452df994b49eb0c = L.polygon(
+                [[26.932800470501505, 75.92163874467819], [26.932725995516503, 75.92163874467819], [26.932724794267312, 75.92164142512007], [26.932677947098913, 75.92164142512007], [26.932677946374902, 75.92168967307418], [26.93267674514511, 75.92169101329513], [26.932670739097848, 75.92169101329513], [26.932670735521338, 75.92191483019332], [26.932800466118408, 75.92191617041426]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_7cb6b8520dc76438f13a01ffaea38f64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6e28f00cb4be53dccb2a7483d0d5a3f = $(`<div id="html_b6e28f00cb4be53dccb2a7483d0d5a3f" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_7cb6b8520dc76438f13a01ffaea38f64.setContent(html_b6e28f00cb4be53dccb2a7483d0d5a3f);
+            
+        
+
+        polygon_4af79be20d5c61bfe452df994b49eb0c.bindPopup(popup_7cb6b8520dc76438f13a01ffaea38f64)
+        ;
+
+        
+    
+    
+            var polygon_70ecaa63f57dcef1f796692645f89bc3 = L.polygon(
+                [[26.933045504454775, 75.92237184553629], [26.932921779886772, 75.92237184553629], [26.932921776121592, 75.92255411558507], [26.932920574883624, 75.92255545580602], [26.932920570058684, 75.92277391182036], [26.932921771237446, 75.9227752520413], [26.93304549580545, 75.9227752520413]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_8d578c77d6fca81984f661f6ef53c4ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9234416c0a5f7fc84e91a0655ae7a4a4 = $(`<div id="html_9234416c0a5f7fc84e91a0655ae7a4a4" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_8d578c77d6fca81984f661f6ef53c4ac.setContent(html_9234416c0a5f7fc84e91a0655ae7a4a4);
+            
+        
+
+        polygon_70ecaa63f57dcef1f796692645f89bc3.bindPopup(popup_8d578c77d6fca81984f661f6ef53c4ac)
+        ;
+
+        
+    
+    
+            var polygon_e72f5b3806c4d8692e607ce8798be340 = L.polygon(
+                [[26.93305271799458, 75.92203813052046], [26.93305271911513, 75.921973799915], [26.933053920347547, 75.92197245969405], [26.93305392125842, 75.92191885085616], [26.933052720071547, 75.92191751063521], [26.93305272263846, 75.92175936456344], [26.93291938839532, 75.92175936456344], [26.932919383751443, 75.92203813052046], [26.932920584889843, 75.9220421511833], [26.933045510667256, 75.9220421511833], [26.93304671194765, 75.92203813052046]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_5dadbfe861977fdc7e1d3e327669418a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45d3a60552c6c83cd4bf134fcd402f70 = $(`<div id="html_45d3a60552c6c83cd4bf134fcd402f70" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_5dadbfe861977fdc7e1d3e327669418a.setContent(html_45d3a60552c6c83cd4bf134fcd402f70);
+            
+        
+
+        polygon_e72f5b3806c4d8692e607ce8798be340.bindPopup(popup_5dadbfe861977fdc7e1d3e327669418a)
+        ;
+
+        
+    
+    
+            var polygon_44c6792351b552e6c4cbe884c4e55c28 = L.polygon(
+                [[26.933045519857963, 75.92145245396651], [26.932930203755816, 75.92145245396651], [26.93292900252832, 75.92145379418746], [26.932922996481285, 75.92145379418746], [26.932922995616504, 75.92151678457198], [26.932921794388392, 75.92151812479293], [26.932896568990767, 75.92151812479293], [26.932896567453124, 75.92162534246872], [26.932914585594293, 75.92162534246872], [26.932915786783973, 75.92162668268966], [26.932915785122294, 75.92173658080733], [26.932921791169342, 75.92173658080733], [26.932922992337154, 75.92173926124923], [26.933045515695742, 75.92173926124923], [26.93304671694673, 75.92173658080733], [26.933074344762584, 75.92173658080733], [26.933074347981638, 75.92151812479293], [26.93304672016578, 75.92151812479293], [26.9330455189751, 75.92151678457198]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_1de1f606dbbe7620094a573b0a918d1d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bdc21bf15cde5d7e908c7a32279bac5d = $(`<div id="html_bdc21bf15cde5d7e908c7a32279bac5d" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_1de1f606dbbe7620094a573b0a918d1d.setContent(html_bdc21bf15cde5d7e908c7a32279bac5d);
+            
+        
+
+        polygon_44c6792351b552e6c4cbe884c4e55c28.bindPopup(popup_1de1f606dbbe7620094a573b0a918d1d)
+        ;
+
+        
+    
+    
+            var polygon_be7c7fc8661682d1db4586edfea27012 = L.polygon(
+                [[26.93322687223482, 75.92303525490497], [26.93314158636998, 75.92303525490497], [26.933141584495278, 75.92311030727798], [26.933125968739596, 75.92311164749893], [26.933124767360837, 75.92311834860367], [26.933046688751087, 75.92311834860367], [26.933045487677244, 75.92311298771988], [26.93290854980573, 75.92311298771988], [26.932907348460784, 75.92311834860367], [26.93290014120431, 75.92311834860367], [26.932900136046293, 75.92331670130376], [26.93312476220282, 75.92331670130376], [26.93312596135128, 75.9233930938977], [26.933226862937964, 75.9233930938977]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_7d18f05dc0ee98af642d7f66b28b0076 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b7377631ec69e80122e56ee29495683 = $(`<div id="html_7b7377631ec69e80122e56ee29495683" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_7d18f05dc0ee98af642d7f66b28b0076.setContent(html_7b7377631ec69e80122e56ee29495683);
+            
+        
+
+        polygon_be7c7fc8661682d1db4586edfea27012.bindPopup(popup_7d18f05dc0ee98af642d7f66b28b0076)
+        ;
+
+        
+    
+    
+            var polygon_b93438d5d9ac596333c040c118edc4d8 = L.polygon(
+                [[26.933279749111698, 75.92188936599533], [26.9331271955229, 75.92188936599533], [26.933127195053107, 75.92191751063521], [26.93312479261185, 75.92191885085616], [26.933124788028945, 75.92217751349897], [26.93312959286644, 75.92217751349897], [26.93313079405083, 75.92217885371991], [26.93313079395078, 75.9221842146037], [26.933282146330164, 75.9221842146037], [26.93328215103809, 75.92191885085616], [26.933280949851255, 75.92191751063521], [26.9332809502988, 75.92189070621627]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_4ad214d2b63e2e36d51a6c57fc42f113 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0130d61ae5936b9dcd18de19d56719c = $(`<div id="html_b0130d61ae5936b9dcd18de19d56719c" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_4ad214d2b63e2e36d51a6c57fc42f113.setContent(html_b0130d61ae5936b9dcd18de19d56719c);
+            
+        
+
+        polygon_b93438d5d9ac596333c040c118edc4d8.bindPopup(popup_4ad214d2b63e2e36d51a6c57fc42f113)
+        ;
+
+        
+    
+    
+            var polygon_d4ea02b7df0b43ebd6095bd4790bdfe1 = L.polygon(
+                [[26.933367421190084, 75.92271896276154], [26.933314567979245, 75.92271896276154], [26.933314566611116, 75.92277927270415], [26.933367419821955, 75.92277927270415]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_29b5cd8265fea3367e63038eba69299f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ccb3a54af5cae4a1d569f222a3ea5aa = $(`<div id="html_9ccb3a54af5cae4a1d569f222a3ea5aa" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_29b5cd8265fea3367e63038eba69299f.setContent(html_9ccb3a54af5cae4a1d569f222a3ea5aa);
+            
+        
+
+        polygon_d4ea02b7df0b43ebd6095bd4790bdfe1.bindPopup(popup_29b5cd8265fea3367e63038eba69299f)
+        ;
+
+        
+    
+    
+            var polygon_614ce3cb998bd3645d79d0d7d77f9f77 = L.polygon(
+                [[26.93393680752414, 75.9220676153813], [26.933936809351962, 75.92196307814741], [26.933846718658703, 75.92196307814741], [26.933845517472392, 75.92196173792647], [26.9338455197012, 75.92182771583175], [26.933779453192074, 75.92182771583175], [26.933779453105366, 75.92183307671554], [26.933777050665125, 75.92183441693649], [26.933777048544737, 75.92196173792647], [26.933786658218832, 75.92196173792647], [26.933789060545553, 75.92196709881026], [26.93378905878659, 75.9220676153813], [26.93379146120511, 75.9220676153813], [26.933792662390434, 75.92206895560224], [26.933845515597685, 75.92206895560224], [26.933846716830878, 75.9220676153813]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_a027d1ca6bc2bf58a887129930e6a64e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0d1be83f85a359d6fe19521d8b0fa0a = $(`<div id="html_c0d1be83f85a359d6fe19521d8b0fa0a" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_a027d1ca6bc2bf58a887129930e6a64e.setContent(html_c0d1be83f85a359d6fe19521d8b0fa0a);
+            
+        
+
+        polygon_614ce3cb998bd3645d79d0d7d77f9f77.bindPopup(popup_a027d1ca6bc2bf58a887129930e6a64e)
+        ;
+
+        
+    
+    
+            var polygon_f12f0f30e8ee562a6f79286fcf214f2f = L.polygon(
+                [[26.933939218684124, 75.92151812479293], [26.933781860291234, 75.92151678457198], [26.933781859571496, 75.92156771296797], [26.933780658343043, 75.92156905318892], [26.93375903657628, 75.92156905318892], [26.93375903560062, 75.9216360642363], [26.933774651321066, 75.9216360642363], [26.933775852510497, 75.92163740445724], [26.933774651241638, 75.92164142512007], [26.93377585243102, 75.92164276534102], [26.933774651201848, 75.92164410556197], [26.933775850986382, 75.92173792102828], [26.93393681302581, 75.92173792102828], [26.93393681317109, 75.92172853948165], [26.933938014401026, 75.9217271992607], [26.93393801573931, 75.92163874467819], [26.933936814549927, 75.92163740445724], [26.933928406085272, 75.92163740445724], [26.933927204856182, 75.92163874467819], [26.93380588274201, 75.92163740445724], [26.93380468163182, 75.9216307033525], [26.933805882860845, 75.92162936313156], [26.933844321556997, 75.92162936313156], [26.93384432222175, 75.92158379561934], [26.933846724736764, 75.9215770945146], [26.9339392178485, 75.9215770945146]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_42aa74a0224d7b7c042c8a26415fe137 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_822ba782a2ee273fa37b6bfeed40c3e5 = $(`<div id="html_822ba782a2ee273fa37b6bfeed40c3e5" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_42aa74a0224d7b7c042c8a26415fe137.setContent(html_822ba782a2ee273fa37b6bfeed40c3e5);
+            
+        
+
+        polygon_f12f0f30e8ee562a6f79286fcf214f2f.bindPopup(popup_42aa74a0224d7b7c042c8a26415fe137)
+        ;
+
+        
+    
+    
+            var polygon_706f1605c2fa2df36d3b372dccedc4b3 = L.polygon(
+                [[26.93405694641819, 75.92067780625885], [26.933963252098778, 75.92067780625885], [26.933963251293196, 75.92077430216708], [26.934056945612614, 75.92077430216708]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_8e6afe7764c85bf47f65fd064cc159d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04648454535b27e2c1076a8f71438e55 = $(`<div id="html_04648454535b27e2c1076a8f71438e55" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_8e6afe7764c85bf47f65fd064cc159d2.setContent(html_04648454535b27e2c1076a8f71438e55);
+            
+        
+
+        polygon_706f1605c2fa2df36d3b372dccedc4b3.bindPopup(popup_8e6afe7764c85bf47f65fd064cc159d2)
+        ;
+
+        
+    
+    
+            var polygon_19de6a517ca7345de0a8bfc9d95408d9 = L.polygon(
+                [[26.93407368205504, 75.9244692913174], [26.934011219175712, 75.9244692913174], [26.934011218660796, 75.92448403374779], [26.934012419823134, 75.92448537396874], [26.934012417415037, 75.92455372523696], [26.93407247787593, 75.92455372523696], [26.93407367913268, 75.92455238501603]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_b9fe710bbb0c1ca597814d28233db6d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e481fb28db0c615a7389b60cdce79ae7 = $(`<div id="html_e481fb28db0c615a7389b60cdce79ae7" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_b9fe710bbb0c1ca597814d28233db6d3.setContent(html_e481fb28db0c615a7389b60cdce79ae7);
+            
+        
+
+        polygon_19de6a517ca7345de0a8bfc9d95408d9.bindPopup(popup_b9fe710bbb0c1ca597814d28233db6d3)
+        ;
+
+        
+    
+    
+            var polygon_f232ff120c27569ad84f423de30efc32 = L.polygon(
+                [[26.934100147593746, 75.923185359651], [26.934049696806827, 75.923185359651], [26.934048495563065, 75.92318669987195], [26.93404489193541, 75.92318669987195], [26.934044890437622, 75.92324432937265], [26.93409894485219, 75.92324432937265], [26.934100146096508, 75.9232429891517]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_01e7f5417eca75bc55c3597c1e6a2eb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5cf7f3243a773bcdc636ca6ecb073638 = $(`<div id="html_5cf7f3243a773bcdc636ca6ecb073638" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_01e7f5417eca75bc55c3597c1e6a2eb6.setContent(html_5cf7f3243a773bcdc636ca6ecb073638);
+            
+        
+
+        polygon_f232ff120c27569ad84f423de30efc32.bindPopup(popup_01e7f5417eca75bc55c3597c1e6a2eb6)
+        ;
+
+        
+    
+    
+            var polygon_40560df27c79661f2e9a80a54c3ef092 = L.polygon(
+                [[26.934245460261284, 75.92431516590864], [26.934185399801862, 75.92431516590864], [26.934185399756583, 75.92431650612959], [26.934184198502095, 75.92431784635053], [26.93416858278256, 75.92431784635053], [26.93416857921029, 75.9244223835843], [26.934245456598436, 75.9244223835843]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_8034d1bf4bb4d3ba00c41cb62cae89ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d74c732eff3f31f05973ac7dd7a28ee1 = $(`<div id="html_d74c732eff3f31f05973ac7dd7a28ee1" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_8034d1bf4bb4d3ba00c41cb62cae89ca.setContent(html_d74c732eff3f31f05973ac7dd7a28ee1);
+            
+        
+
+        polygon_40560df27c79661f2e9a80a54c3ef092.bindPopup(popup_8034d1bf4bb4d3ba00c41cb62cae89ca)
+        ;
+
+        
+    
+    
+            var polygon_4e2f2083fd5e5733cf7509defdc9cdb4 = L.polygon(
+                [[26.934245540268382, 75.91992996297007], [26.93421671124793, 75.91992996297007], [26.934216711117234, 75.9199755304823], [26.93424554013769, 75.9199755304823]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_edb120a588b4c63b7c41d1e5e810ece4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f769343e1486f73226026571f4f023b9 = $(`<div id="html_f769343e1486f73226026571f4f023b9" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_edb120a588b4c63b7c41d1e5e810ece4.setContent(html_f769343e1486f73226026571f4f023b9);
+            
+        
+
+        polygon_4e2f2083fd5e5733cf7509defdc9cdb4.bindPopup(popup_edb120a588b4c63b7c41d1e5e810ece4)
+        ;
+
+        
+    
+    
+            var polygon_44dc9dfc03b5174b3ee4a0e834573893 = L.polygon(
+                [[26.93433680287882, 75.92244823813027], [26.933930794168464, 75.92244823813027], [26.933925983537808, 75.92271762254059], [26.933846703697565, 75.92271896276154], [26.933845511003003, 75.92231421603556], [26.933674939287254, 75.92231421603556], [26.933672535861156, 75.92236514443155], [26.933661725164598, 75.92235576288492], [26.9334563181873, 75.92236514443155], [26.9334514962691, 75.92311968882461], [26.933568013538085, 75.92312102904556], [26.9335692144074, 75.92313443125502], [26.934239489164053, 75.92313443125502], [26.934246697266733, 75.92310092573136], [26.934325977038625, 75.92310226595231], [26.934324764715505, 75.92351907466667], [26.934317562039347, 75.92335288726932], [26.934246690697908, 75.92335288726932], [26.934245490459784, 75.92331670130376], [26.93384668899968, 75.92331670130376], [26.933845488290288, 75.92329793821051], [26.933623264575296, 75.92329793821051], [26.933616056425198, 75.92333144373417], [26.933594434621998, 75.92333278395512], [26.933594415985556, 75.92397340956742], [26.933607629245753, 75.92397474978837], [26.933607625064383, 75.92410609144108], [26.934235857496038, 75.92410609144108], [26.934246669284992, 75.92407794680122], [26.93427549830532, 75.92407794680122], [26.934275501538345, 75.92397609000932], [26.934328354784036, 75.92397474978837], [26.93432836670948, 75.92357670416736], [26.93447971910143, 75.92357536394641], [26.934479731302865, 75.92312236926651], [26.934340391074798, 75.92312102904556]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_47194377560de03c318f2884b28f6f0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88ae03fb5664ab0ca7c93f3b5539af05 = $(`<div id="html_88ae03fb5664ab0ca7c93f3b5539af05" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_47194377560de03c318f2884b28f6f0b.setContent(html_88ae03fb5664ab0ca7c93f3b5539af05);
+            
+        
+
+        polygon_44dc9dfc03b5174b3ee4a0e834573893.bindPopup(popup_47194377560de03c318f2884b28f6f0b)
+        ;
+
+        
+    
+    
+            var polygon_1114ba2e8213c79c070328277969db10 = L.polygon(
+                [[26.934491774910754, 75.92151812479293], [26.934398080597113, 75.92151812479293], [26.934398078036704, 75.92169369373703], [26.93449177235035, 75.92169369373703]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_aa55a93190f0d03fc339350b29c2caf9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31d7807cf8ae6af79f19262d025d3bca = $(`<div id="html_31d7807cf8ae6af79f19262d025d3bca" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_aa55a93190f0d03fc339350b29c2caf9.setContent(html_31d7807cf8ae6af79f19262d025d3bca);
+            
+        
+
+        polygon_1114ba2e8213c79c070328277969db10.bindPopup(popup_aa55a93190f0d03fc339350b29c2caf9)
+        ;
+
+        
+    
+    
+            var polygon_9e31ac45fc064ecd4601282fb3952104 = L.polygon(
+                [[26.934645452735243, 75.92460733407479], [26.93464545316719, 75.92459527208628], [26.93464305079689, 75.92459393186533], [26.934643050940604, 75.9245899112025], [26.934645453406716, 75.92458857098156], [26.934643061572693, 75.92428300060594], [26.934354771379073, 75.92428300060594], [26.934354770250835, 75.92431650612959], [26.9343343496497, 75.92431784635053], [26.934334342427736, 75.92452692081805], [26.93434515331024, 75.92452692081805], [26.934348756795803, 75.9245309414809], [26.93434875426967, 75.924601973191], [26.93456377070705, 75.924601973191], [26.93456497172407, 75.92460733407479]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_f77898dcb9a3168cf41d8ecebe92b117 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a55aaffb33e89d7ced7ddf95f50ef7c = $(`<div id="html_6a55aaffb33e89d7ced7ddf95f50ef7c" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_f77898dcb9a3168cf41d8ecebe92b117.setContent(html_6a55aaffb33e89d7ced7ddf95f50ef7c);
+            
+        
+
+        polygon_9e31ac45fc064ecd4601282fb3952104.bindPopup(popup_f77898dcb9a3168cf41d8ecebe92b117)
+        ;
+
+        
+    
+    
+            var polygon_3e179ea0c6ce70376d3f8da387df71e2 = L.polygon(
+                [[26.93464550488585, 75.92284628375148], [26.93457943838421, 75.92284628375148], [26.934579433342535, 75.92305535821917], [26.93464549984418, 75.92305535821917]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_08c6407672879c3b0c5a0d7bbaa03e7d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c72a33be759220cd448fb58b45c01b53 = $(`<div id="html_c72a33be759220cd448fb58b45c01b53" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_08c6407672879c3b0c5a0d7bbaa03e7d.setContent(html_c72a33be759220cd448fb58b45c01b53);
+            
+        
+
+        polygon_3e179ea0c6ce70376d3f8da387df71e2.bindPopup(popup_08c6407672879c3b0c5a0d7bbaa03e7d)
+        ;
+
+        
+    
+    
+            var polygon_3676b4e2c5ae7aa31eccbfd5d30a02e7 = L.polygon(
+                [[26.93468273094623, 75.92330329909429], [26.934639487418185, 75.92330329909429], [26.93463948166172, 75.92351371378288], [26.93468272518977, 75.92351371378288]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_9a41fb4397c64f9904e18bdbc00933c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2db61274d68b2860388f2a629d6771f3 = $(`<div id="html_2db61274d68b2860388f2a629d6771f3" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_9a41fb4397c64f9904e18bdbc00933c1.setContent(html_2db61274d68b2860388f2a629d6771f3);
+            
+        
+
+        polygon_3676b4e2c5ae7aa31eccbfd5d30a02e7.bindPopup(popup_9a41fb4397c64f9904e18bdbc00933c1)
+        ;
+
+        
+    
+    
+            var polygon_cb74d346431a04a84eee7202aaa69202 = L.polygon(
+                [[26.934852101285763, 75.92330865997808], [26.934725974331243, 75.92330865997808], [26.93472597091761, 75.92343464074705], [26.93472837329889, 75.923435980968], [26.9347283713991, 75.92350433223626], [26.93485209593542, 75.92350433223626]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_8525ca7587e337c23ccb941ec180e94f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1d1368a91ce19ebeffa0537fa4e5d0b = $(`<div id="html_a1d1368a91ce19ebeffa0537fa4e5d0b" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_8525ca7587e337c23ccb941ec180e94f.setContent(html_a1d1368a91ce19ebeffa0537fa4e5d0b);
+            
+        
+
+        polygon_cb74d346431a04a84eee7202aaa69202.bindPopup(popup_8525ca7587e337c23ccb941ec180e94f)
+        ;
+
+        
+    
+    
+            var polygon_097a0a596369e6953c9848cf2794ac05 = L.polygon(
+                [[26.934878564541396, 75.92149668125776], [26.934724809778068, 75.92149668125776], [26.934723608271213, 75.92151812479293], [26.93464673086956, 75.92151946501387], [26.934645529847053, 75.9215060628044], [26.934584268181915, 75.9215060628044], [26.934583066860977, 75.92151410413008], [26.934536219704917, 75.92151410413008], [26.934536212551254, 75.921973799915], [26.934586663311645, 75.92197514013594], [26.93458666154696, 75.92207565670698], [26.93459026515032, 75.92207699692793], [26.934590264957755, 75.92208771869551], [26.934645520577266, 75.92208771869551], [26.934646723790692, 75.921973799915], [26.93472360117363, 75.921973799915], [26.934724801285835, 75.92203679029952], [26.934878556049163, 75.92203679029952], [26.93487855719211, 75.9219711194731], [26.934884563260496, 75.92196977925215], [26.93488457025158, 75.92152080523482], [26.934878564224928, 75.92151946501387]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_7256bd3e953afadcd08b1ae5afcd4a72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a69f8b2c3291194c6fefd674eda0b055 = $(`<div id="html_a69f8b2c3291194c6fefd674eda0b055" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_7256bd3e953afadcd08b1ae5afcd4a72.setContent(html_a69f8b2c3291194c6fefd674eda0b055);
+            
+        
+
+        polygon_097a0a596369e6953c9848cf2794ac05.bindPopup(popup_7256bd3e953afadcd08b1ae5afcd4a72)
+        ;
+
+        
+    
+    
+            var polygon_35af15bc45d837ae23058aef34bc4d6b = L.polygon(
+                [[26.934925424111512, 75.92008944926285], [26.934874973330494, 75.92008944926285], [26.93487497266813, 75.92024089422993], [26.934924222240074, 75.92024089422993], [26.934925423455716, 75.92023955400899]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_38083ca07321e09ae345e60badccd6ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f421651d9fa94b835cf2b0c6e8966bb = $(`<div id="html_0f421651d9fa94b835cf2b0c6e8966bb" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_38083ca07321e09ae345e60badccd6ec.setContent(html_0f421651d9fa94b835cf2b0c6e8966bb);
+            
+        
+
+        polygon_35af15bc45d837ae23058aef34bc4d6b.bindPopup(popup_38083ca07321e09ae345e60badccd6ec)
+        ;
+
+        
+    
+    
+            var polygon_a0d1c01cf7a91f401ac143a11a6628f6 = L.polygon(
+                [[26.934979387123256, 75.92465558202883], [26.934725932007403, 75.92465558202883], [26.934724728504296, 75.92471857241327], [26.934646649912253, 75.92471857241327], [26.934645452302266, 75.92461939606329], [26.93456857491848, 75.92461939606329], [26.93456857404943, 75.92464352004032], [26.934564970373643, 75.92464486026127], [26.934564968671584, 75.92469176799436], [26.934562566057807, 75.92469712887814], [26.9345541575939, 75.92469712887814], [26.93455415685891, 75.92471723219232], [26.93454694955501, 75.92471857241327], [26.934546947927526, 75.92476279970447], [26.934554155083234, 75.92476548014635], [26.934554154835308, 75.92477218125109], [26.934563764458726, 75.92477352147203], [26.934563756819536, 75.92497589483477], [26.93454573857945, 75.92497857527665], [26.934546929705164, 75.92523455747717], [26.934643026435065, 75.92523455747717], [26.934644230115097, 75.9251729073137], [26.93472350991626, 75.9251729073137], [26.934724707245923, 75.92526940322173], [26.934969753898404, 75.92526940322173], [26.934969757724414, 75.92517424753464], [26.934982971077485, 75.9251729073137], [26.934982988456415, 75.92471857241327], [26.934979384878357, 75.92471723219232]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_ac024c199689a1e9ed88a83345c7373b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_38232d837d66ad3bced2fe43e1953aa3 = $(`<div id="html_38232d837d66ad3bced2fe43e1953aa3" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_ac024c199689a1e9ed88a83345c7373b.setContent(html_38232d837d66ad3bced2fe43e1953aa3);
+            
+        
+
+        polygon_a0d1c01cf7a91f401ac143a11a6628f6.bindPopup(popup_ac024c199689a1e9ed88a83345c7373b)
+        ;
+
+        
+    
+    
+            var polygon_ffd236048cd9c548883bd6e17281dbbe = L.polygon(
+                [[26.935028729129325, 75.91954799999999], [26.934584281766874, 75.91954799999999], [26.93458428150717, 75.91981872463143], [26.934580677877225, 75.91982006485237], [26.934580677658182, 75.9199165607606], [26.93444494102212, 75.91991790098155], [26.934444939107575, 75.92037089566186], [26.934645541032648, 75.92037089566186], [26.934646743977126, 75.9199808913661], [26.93495665592197, 75.9199808913661], [26.93495785714739, 75.9199755304823], [26.935028728485733, 75.91997419026136]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_edd69605490ebc29e617bcc405dd023f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f1affdb31e77c7ddd67bc6259131f7e = $(`<div id="html_0f1affdb31e77c7ddd67bc6259131f7e" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_edd69605490ebc29e617bcc405dd023f.setContent(html_0f1affdb31e77c7ddd67bc6259131f7e);
+            
+        
+
+        polygon_ffd236048cd9c548883bd6e17281dbbe.bindPopup(popup_edd69605490ebc29e617bcc405dd023f)
+        ;
+
+        
+    
+    
+            var polygon_febd7f90232698a11f91a2a713ad6bbc = L.polygon(
+                [[26.935032297128807, 75.92271896276154], [26.935019083829253, 75.92271896276154], [26.93501908258379, 75.92277391182036], [26.93503229588334, 75.92277391182036]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_819fb935fee79de8afdeccc74c483ad3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74e5182860788f09080f2049d0ace065 = $(`<div id="html_74e5182860788f09080f2049d0ace065" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_819fb935fee79de8afdeccc74c483ad3.setContent(html_74e5182860788f09080f2049d0ace065);
+            
+        
+
+        polygon_febd7f90232698a11f91a2a713ad6bbc.bindPopup(popup_819fb935fee79de8afdeccc74c483ad3)
+        ;
+
+        
+    
+    
+            var polygon_4c3a2e7162fa99f88396bf30711b61b1 = L.polygon(
+                [[26.935045425570156, 75.92537930133922], [26.935000980835277, 75.92537930133922], [26.935000977601646, 75.92545703415402], [26.935021398155552, 75.92545703415402], [26.93502259930847, 75.92545837437497], [26.93502259716619, 75.92550930277086], [26.935045420138117, 75.92550930277086]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_4aac61936af2a72aefe47d3bcb7ab553 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1540e7ed238510ab4d8afd18366f51b5 = $(`<div id="html_1540e7ed238510ab4d8afd18366f51b5" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_4aac61936af2a72aefe47d3bcb7ab553.setContent(html_1540e7ed238510ab4d8afd18366f51b5);
+            
+        
+
+        polygon_4c3a2e7162fa99f88396bf30711b61b1.bindPopup(popup_4aac61936af2a72aefe47d3bcb7ab553)
+        ;
+
+        
+    
+    
+            var polygon_8461083ab6eea5412bae5f4c18f716b4 = L.polygon(
+                [[26.935045471789394, 75.92412619475527], [26.935015441563163, 75.92412619475527], [26.935015439769714, 75.92418114381405], [26.935014238516647, 75.924182484035], [26.935014235673542, 75.92426825817553], [26.935045467108832, 75.92426825817553]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_1dac96bb5bc680f872d388239afc3d8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76af3c6de0c6c0a18270342b9b4aa590 = $(`<div id="html_76af3c6de0c6c0a18270342b9b4aa590" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_1dac96bb5bc680f872d388239afc3d8c.setContent(html_76af3c6de0c6c0a18270342b9b4aa590);
+            
+        
+
+        polygon_8461083ab6eea5412bae5f4c18f716b4.bindPopup(popup_1dac96bb5bc680f872d388239afc3d8c)
+        ;
+
+        
+    
+    
+            var polygon_d2f98c6cbf92310c43c35985c8646acc = L.polygon(
+                [[26.935045506722723, 75.92287978927516], [26.935033494632243, 75.92287978927516], [26.935032293675945, 75.92286906750758], [26.93501427554018, 75.92286906750758], [26.93501306824413, 75.92311834860367], [26.934589041435846, 75.92311834860367], [26.934589036955604, 75.92329123710577], [26.934595042965665, 75.92329257732672], [26.93459504278768, 75.92329927843146], [26.9346454935707, 75.92329927843146], [26.934646694993354, 75.92329123710577], [26.935027478272506, 75.92329123710577], [26.935027478804347, 75.92327113379157], [26.935032283675895, 75.92326979357063], [26.935033485026246, 75.92326443268684], [26.93504549711672, 75.92326443268684]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_b47212fa77060be93f59e641fbe7dbb3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a6bfe099abfacc48a54cfa7ed336906 = $(`<div id="html_2a6bfe099abfacc48a54cfa7ed336906" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_b47212fa77060be93f59e641fbe7dbb3.setContent(html_2a6bfe099abfacc48a54cfa7ed336906);
+            
+        
+
+        polygon_d2f98c6cbf92310c43c35985c8646acc.bindPopup(popup_b47212fa77060be93f59e641fbe7dbb3)
+        ;
+
+        
+    
+    
+            var polygon_595dfdd4ca36b32bfacc03b30d5fd3f4 = L.polygon(
+                [[26.93519078252682, 75.92511527781306], [26.935140331747707, 75.92511527781306], [26.935140329408863, 75.92517424753464], [26.935190780187977, 75.92517424753464]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_ec48f86b2a53e2bf8a0d1c8e4ec73e08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc162c1cc1ed59383945cb66fb23c68c = $(`<div id="html_cc162c1cc1ed59383945cb66fb23c68c" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_ec48f86b2a53e2bf8a0d1c8e4ec73e08.setContent(html_cc162c1cc1ed59383945cb66fb23c68c);
+            
+        
+
+        polygon_595dfdd4ca36b32bfacc03b30d5fd3f4.bindPopup(popup_ec48f86b2a53e2bf8a0d1c8e4ec73e08)
+        ;
+
+        
+    
+    
+            var polygon_f50363fae2bfc5ac38e312a7c66da77a = L.polygon(
+                [[26.935441931277538, 75.92151812479293], [26.93518367134221, 75.92151812479293], [26.935183669942372, 75.92161596092208], [26.935441929877697, 75.92161596092208]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_cb37d97ffdbde4a4b5ad97cc832faad2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15682e374564b75d53e17ea0534155d1 = $(`<div id="html_15682e374564b75d53e17ea0534155d1" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_cb37d97ffdbde4a4b5ad97cc832faad2.setContent(html_15682e374564b75d53e17ea0534155d1);
+            
+        
+
+        polygon_f50363fae2bfc5ac38e312a7c66da77a.bindPopup(popup_cb37d97ffdbde4a4b5ad97cc832faad2)
+        ;
+
+        
+    
+    
+            var polygon_7cc8a1b0506879b2826a7a6945535789 = L.polygon(
+                [[26.93544553030744, 75.92182369516891], [26.93517886190908, 75.92182369516891], [26.935178859385484, 75.92197514013594], [26.9351824629895, 75.92197648035689], [26.935182461271864, 75.92207431648603], [26.935446727252128, 75.92207431648603]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_3ebc06598a9310940c85882af5d10bc5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e926c03a0879b94cfc5be90df02ee66 = $(`<div id="html_7e926c03a0879b94cfc5be90df02ee66" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_3ebc06598a9310940c85882af5d10bc5.setContent(html_7e926c03a0879b94cfc5be90df02ee66);
+            
+        
+
+        polygon_7cc8a1b0506879b2826a7a6945535789.bindPopup(popup_3ebc06598a9310940c85882af5d10bc5)
+        ;
+
+        
+    
+    
+            var polygon_28d7b3b0b4ee7a7593a49c4afc3f1f92 = L.polygon(
+                [[26.935581259069387, 75.92226730830242], [26.935524802248235, 75.92226730830242], [26.935523600935863, 75.9222726691862], [26.9354431199347, 75.9222726691862], [26.9354419188033, 75.92226864852337], [26.935128403252683, 75.92226864852337], [26.935127201078874, 75.9223182366984], [26.935025098310323, 75.9223182366984], [26.935025094670436, 75.9224978263053], [26.93513080106609, 75.9224978263053], [26.935135605705796, 75.92250720785194], [26.935150020186047, 75.92250854807288], [26.935150016690606, 75.92267071480745], [26.935135602152567, 75.9226720550284], [26.935135601106293, 75.92271896276154], [26.935116381701498, 75.92272164320343], [26.9351163726279, 75.92310226595231], [26.935444302653046, 75.92310360617326], [26.935445504131778, 75.92309288440568], [26.93553439359566, 75.92309288440568], [26.935534401156087, 75.9227779324832], [26.935593260456397, 75.9227752520413], [26.93559327008933, 75.92232225736124], [26.935584861626648, 75.92232225736124], [26.93558125810508, 75.92231689647745]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_f79e0ec1ab30ab00d3357fed830495ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d24ebd19a6136e5253f0230b5fe6ccd0 = $(`<div id="html_d24ebd19a6136e5253f0230b5fe6ccd0" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_f79e0ec1ab30ab00d3357fed830495ca.setContent(html_d24ebd19a6136e5253f0230b5fe6ccd0);
+            
+        
+
+        polygon_28d7b3b0b4ee7a7593a49c4afc3f1f92.bindPopup(popup_f79e0ec1ab30ab00d3357fed830495ca)
+        ;
+
+        
+    
+    
+            var polygon_7a735571f7c488048d15a15ebca33102 = L.polygon(
+                [[26.935844309738727, 75.92291999590356], [26.935802267426713, 75.92291999590356], [26.93580226159305, 75.92315587479017], [26.93584430390506, 75.92315587479017]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_75adefde8f5813e1afb23fb1a20fea9a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28c7cc760ada74bcc9a2036199ab623a = $(`<div id="html_28c7cc760ada74bcc9a2036199ab623a" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_75adefde8f5813e1afb23fb1a20fea9a.setContent(html_28c7cc760ada74bcc9a2036199ab623a);
+            
+        
+
+        polygon_7a735571f7c488048d15a15ebca33102.bindPopup(popup_75adefde8f5813e1afb23fb1a20fea9a)
+        ;
+
+        
+    
+    
+            var polygon_b5b0692f001e625dda4dfa79e287f1ad = L.polygon(
+                [[26.935876723501497, 75.92363433366805], [26.935845492069884, 75.92363433366805], [26.935841888985248, 75.9236155705748], [26.93549954443719, 75.9236155705748], [26.935498334172337, 75.92391846050865], [26.935055088048514, 75.92391846050865], [26.935055079227652, 75.92419454602351], [26.935129554188073, 75.92419454602351], [26.93513075522048, 75.92419990690729], [26.935444270770997, 75.92419990690729], [26.9354454721566, 75.92419454602351], [26.93550433139632, 75.92419454602351], [26.93550794213153, 75.92397340956742], [26.935511545716402, 75.92397474978837], [26.935511539574073, 75.92416640138364], [26.935525954081665, 75.92416640138364], [26.935527155071153, 75.92417310248838], [26.93584427423079, 75.92417310248838], [26.93584428063463, 75.92397340956742], [26.93587671331718, 75.92397206934648]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_c7c07ff4d8e7e9886cb343d88921ddfa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da2af6d9f3b769817a0cd1539eaf7de2 = $(`<div id="html_da2af6d9f3b769817a0cd1539eaf7de2" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_c7c07ff4d8e7e9886cb343d88921ddfa.setContent(html_da2af6d9f3b769817a0cd1539eaf7de2);
+            
+        
+
+        polygon_b5b0692f001e625dda4dfa79e287f1ad.bindPopup(popup_c7c07ff4d8e7e9886cb343d88921ddfa)
+        ;
+
+        
+    
+    
+            var polygon_c43823ae317d1d67bc8b6533876915e7 = L.polygon(
+                [[26.93618784919871, 75.92317329766247], [26.936187849267547, 75.92317061722058], [26.936155416628452, 75.92317061722058], [26.936154215453996, 75.92316927699963], [26.936154222364184, 75.92288917082179], [26.936070137743602, 75.92288917082179], [26.93606893659817, 75.9228864903799], [26.93592839515866, 75.9228864903799], [26.93592719388632, 75.92288917082179], [26.93592479146853, 75.92288917082179], [26.93592478483308, 75.92315855523206], [26.935928388425477, 75.92315989545301], [26.9359283880818, 75.92317329766247], [26.936002863032993, 75.92317329766247], [26.93600406420744, 75.92317463788342]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_345e9257aa5f6f21d83cb7c339d1d825 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13bdc8b56f21447c90970438bf43d449 = $(`<div id="html_13bdc8b56f21447c90970438bf43d449" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_345e9257aa5f6f21d83cb7c339d1d825.setContent(html_13bdc8b56f21447c90970438bf43d449);
+            
+        
+
+        polygon_c43823ae317d1d67bc8b6533876915e7.bindPopup(popup_345e9257aa5f6f21d83cb7c339d1d825)
+        ;
+
+        
+    
+    
+            var polygon_5446d655d3bcfcb0694669a9f9141864 = L.polygon(
+                [[26.93624302871877, 75.92543156995606], [26.935943927710497, 75.92543156995606], [26.93594272627798, 75.92543693083985], [26.935923506935644, 75.92543693083985], [26.935923501107297, 75.92557497359715], [26.935927104676743, 75.9255763138181], [26.935927094700176, 75.9258054915996], [26.93624421384183, 75.9258054915996]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_ac85e9f93ab6c5abb6f017e8af0cc1f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_adebceeb40b5fc2ba6da6e2454571c81 = $(`<div id="html_adebceeb40b5fc2ba6da6e2454571c81" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_ac85e9f93ab6c5abb6f017e8af0cc1f4.setContent(html_adebceeb40b5fc2ba6da6e2454571c81);
+            
+        
+
+        polygon_5446d655d3bcfcb0694669a9f9141864.bindPopup(popup_ac85e9f93ab6c5abb6f017e8af0cc1f4)
+        ;
+
+        
+    
+    
+            var polygon_47a205274c3bf4ca33cd9718e61899e6 = L.polygon(
+                [[26.936244270923144, 75.92434867143228], [26.936124150037827, 75.92434867143228], [26.936124138825814, 75.92466764401733], [26.936244259711124, 75.92466764401733]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_d83a02025f9a11914ed751b9b8ac82d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce3689ec3380051adb4ae32a7188721f = $(`<div id="html_ce3689ec3380051adb4ae32a7188721f" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_d83a02025f9a11914ed751b9b8ac82d4.setContent(html_ce3689ec3380051adb4ae32a7188721f);
+            
+        
+
+        polygon_47a205274c3bf4ca33cd9718e61899e6.bindPopup(popup_d83a02025f9a11914ed751b9b8ac82d4)
+        ;
+
+        
+    
+    
+            var polygon_bd24af1d91d55b0a38410755484d7db4 = L.polygon(
+                [[26.93650249763067, 75.92524125858189], [26.936502502551427, 75.92511795825496], [26.93649649656031, 75.92511661803401], [26.936496503430668, 75.92493970886925], [26.936106110611085, 75.9249383686483], [26.93609289721112, 75.9249410490902], [26.93609288810603, 75.92517424753464], [26.93610610129667, 75.92517692797654], [26.93610729992475, 75.92524125858189], [26.936323517517355, 75.92524125858189], [26.936324718618014, 75.92524393902379], [26.9364916866433, 75.92524393902379], [26.936492887960263, 75.92524125858189]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_677208235e665d06fb3942fdd1acde50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94ba7387b4f1b26d6b9e5becbf0d19ef = $(`<div id="html_94ba7387b4f1b26d6b9e5becbf0d19ef" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_677208235e665d06fb3942fdd1acde50.setContent(html_94ba7387b4f1b26d6b9e5becbf0d19ef);
+            
+        
+
+        polygon_bd24af1d91d55b0a38410755484d7db4.bindPopup(popup_677208235e665d06fb3942fdd1acde50)
+        ;
+
+        
+    
+    
+            var polygon_41067be40655b098b873b252e0ecdfee = L.polygon(
+                [[26.93659870836256, 75.9200291393202], [26.93657828781323, 75.9200291393202], [26.936578287808654, 75.92003047954115], [26.936577086595275, 75.9200318197621], [26.936505014067734, 75.9200318197621], [26.93650501356795, 75.92016048097308], [26.936506214776745, 75.92016048097308], [26.936509818391485, 75.92016316141498], [26.936599909050734, 75.92016316141498], [26.93659990956218, 75.9200318197621], [26.936598708357987, 75.92003047954115]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_0e5bd96ed968f570bb5b52880aaaf943 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a26525add4d9da946486785154e565d4 = $(`<div id="html_a26525add4d9da946486785154e565d4" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_0e5bd96ed968f570bb5b52880aaaf943.setContent(html_a26525add4d9da946486785154e565d4);
+            
+        
+
+        polygon_41067be40655b098b873b252e0ecdfee.bindPopup(popup_0e5bd96ed968f570bb5b52880aaaf943)
+        ;
+
+        
+    
+    
+            var polygon_2fddacb16f77fe39047c6d3ca9f5a123 = L.polygon(
+                [[26.936634698290515, 75.92319608141857], [26.93600406365471, 75.92319608141857], [26.936004043834348, 75.92389567675255], [26.936025665594222, 75.92389567675255], [26.936026876308414, 75.92357536394641], [26.936634687975463, 75.92357536394641]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_7bf2d8e4896f766ec837d6541670bb0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_476b368d6cc920676102db2d911a4e29 = $(`<div id="html_476b368d6cc920676102db2d911a4e29" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_7bf2d8e4896f766ec837d6541670bb0c.setContent(html_476b368d6cc920676102db2d911a4e29);
+            
+        
+
+        polygon_2fddacb16f77fe39047c6d3ca9f5a123.bindPopup(popup_7bf2d8e4896f766ec837d6541670bb0c)
+        ;
+
+        
+    
+    
+            var polygon_03a168e2b3a8e122f60eb0d32c021e64 = L.polygon(
+                [[26.936650358371114, 75.92043522626734], [26.936644352335655, 75.9204338860464], [26.9365506580506, 75.9204338860464], [26.936548255624604, 75.92043522626734], [26.936548255313003, 75.92048347422146], [26.93654705409532, 75.9204848144424], [26.93645576222659, 75.9204848144424], [26.936455760215384, 75.92075017819002], [26.936644349995547, 75.92075017819002], [26.93664435184453, 75.92050893841946], [26.93665035789752, 75.92050759819851]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_14542b3007ce8b8e03d001ceaf0c9caf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_adc312ed88c368ff9db921ffcccc17d0 = $(`<div id="html_adc312ed88c368ff9db921ffcccc17d0" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_14542b3007ce8b8e03d001ceaf0c9caf.setContent(html_adc312ed88c368ff9db921ffcccc17d0);
+            
+        
+
+        polygon_03a168e2b3a8e122f60eb0d32c021e64.bindPopup(popup_14542b3007ce8b8e03d001ceaf0c9caf)
+        ;
+
+        
+    
+    
+            var polygon_b475bfff2cda88acced4fe7cb70eb6ea = L.polygon(
+                [[26.936682697737705, 75.9247547583788], [26.93668269887172, 75.92472393329705], [26.936644260240186, 75.9247225930761], [26.93664428743656, 75.92391846050865], [26.936004043130545, 75.92391846050865], [26.936010045728448, 75.92402835862622], [26.936244281456705, 75.92402835862622], [26.936245484357464, 75.92397474978837], [26.936324764098586, 75.92397609000932], [26.936324738895337, 75.92471723219232], [26.93616738048785, 75.92471857241327], [26.936167379996135, 75.92473197462272], [26.936323537145682, 75.92473197462272], [26.936324737515683, 75.9247547583788], [26.936514528508145, 75.9247547583788], [26.93651572897374, 75.92477486169297], [26.936534948314456, 75.92477486169297], [26.936536150266452, 75.9247547583788]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_1cc258bdccc0b55a0a8ca71790cd8f20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85cb1f91d23b2c2b000705dbc62f51a7 = $(`<div id="html_85cb1f91d23b2c2b000705dbc62f51a7" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_1cc258bdccc0b55a0a8ca71790cd8f20.setContent(html_85cb1f91d23b2c2b000705dbc62f51a7);
+            
+        
+
+        polygon_b475bfff2cda88acced4fe7cb70eb6ea.bindPopup(popup_1cc258bdccc0b55a0a8ca71790cd8f20)
+        ;
+
+        
+    
+    
+            var polygon_00b21b87c7d7512d61e07101498ddc27 = L.polygon(
+                [[26.93693383768314, 75.9211187389506], [26.936768070877076, 75.9211187389506], [26.936768069626943, 75.92122729684733], [26.93693383643301, 75.92122729684733]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_19d608e26c7ade4c11a6060b3156a30f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4783854e6ce0e13d32df4d3e9a8a6fc3 = $(`<div id="html_4783854e6ce0e13d32df4d3e9a8a6fc3" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_19d608e26c7ade4c11a6060b3156a30f.setContent(html_4783854e6ce0e13d32df4d3e9a8a6fc3);
+            
+        
+
+        polygon_00b21b87c7d7512d61e07101498ddc27.bindPopup(popup_19d608e26c7ade4c11a6060b3156a30f)
+        ;
+
+        
+    
+    
+            var polygon_0462a3dcaf411d3fb14bcb96bd4f589a = L.polygon(
+                [[26.93697822192351, 75.92396804868365], [26.936975819506074, 75.92396804868365], [26.93697461842324, 75.9239640280208], [26.936724767005355, 75.9239640280208], [26.93672356567071, 75.92396804868365], [26.93668392578148, 75.92396804868365], [26.936682724698592, 75.9239640280208], [26.936658700523186, 75.9239640280208], [26.93665868896177, 75.92431918657147], [26.936676707093337, 75.92431918657147], [26.936677908211443, 75.92432186701336], [26.936682713046515, 75.92432186701336], [26.936683914345945, 75.92431918657147], [26.936723554235176, 75.92431918657147], [26.936724755353282, 75.92432186701336], [26.936972204353726, 75.92432186701336], [26.936978210487975, 75.92431918657147]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_760fb621e0e350d53b69824cf2f545f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aeb0ecc6d705939c48e410ab3547783d = $(`<div id="html_aeb0ecc6d705939c48e410ab3547783d" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_760fb621e0e350d53b69824cf2f545f5.setContent(html_aeb0ecc6d705939c48e410ab3547783d);
+            
+        
+
+        polygon_0462a3dcaf411d3fb14bcb96bd4f589a.bindPopup(popup_760fb621e0e350d53b69824cf2f545f5)
+        ;
+
+        
+    
+    
+            var polygon_0112e0b6e17f4d590242537074243433 = L.polygon(
+                [[26.936978288375553, 75.92043254582545], [26.936900209808456, 75.92043254582545], [26.93690020897211, 75.92055718637357], [26.936978287539212, 75.92055718637357]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_bf7ac51c09f1d007bed963142a5b30d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b741c43090beb808ab3d0f9d6ccd0dd3 = $(`<div id="html_b741c43090beb808ab3d0f9d6ccd0dd3" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_bf7ac51c09f1d007bed963142a5b30d6.setContent(html_b741c43090beb808ab3d0f9d6ccd0dd3);
+            
+        
+
+        polygon_0112e0b6e17f4d590242537074243433.bindPopup(popup_bf7ac51c09f1d007bed963142a5b30d6)
+        ;
+
+        
+    
+    
+            var polygon_a0a4ef85942934709cb1218e3b4cf2f9 = L.polygon(
+                [[26.937023934974782, 75.92031862704489], [26.936852162127142, 75.92031862704489], [26.93685216187869, 75.92036285433618], [26.937023934726327, 75.92036285433618]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_4d2295abed1f943fde54e45a2f595b03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8355b3aa0b27d245431be10cddab1c41 = $(`<div id="html_8355b3aa0b27d245431be10cddab1c41" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_4d2295abed1f943fde54e45a2f595b03.setContent(html_8355b3aa0b27d245431be10cddab1c41);
+            
+        
+
+        polygon_a0a4ef85942934709cb1218e3b4cf2f9.bindPopup(popup_4d2295abed1f943fde54e45a2f595b03)
+        ;
+
+        
+    
+    
+            var polygon_8f2c1d65d7e85101297d9de17814049a = L.polygon(
+                [[26.937350609965154, 75.92351907466667], [26.937272531402183, 75.92351907466667], [26.937272530264988, 75.92355928129506], [26.937350608827966, 75.92355928129506]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_427b47f53bcaa95d220405d7005fc149);
+        
+    
+        var popup_2bc6d7500c608ef0aba8074ba606dc51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_613c17712c20566febceec24324a5493 = $(`<div id="html_613c17712c20566febceec24324a5493" style="width: 100.0%; height: 100.0%;"><b>Obstacle:</b> Building</div>`)[0];
+                popup_2bc6d7500c608ef0aba8074ba606dc51.setContent(html_613c17712c20566febceec24324a5493);
+            
+        
+
+        polygon_8f2c1d65d7e85101297d9de17814049a.bindPopup(popup_2bc6d7500c608ef0aba8074ba606dc51)
+        ;
+
+        
+    
+</script>
+</html>
