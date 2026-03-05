@@ -88,8 +88,6 @@ RIS-placement-using-CNN/
 └── README.md
 ```
 
-> **Note:** Model weights and datasets are not included in the repository due to file size. See the [Setup](#setup-and-installation) section for download instructions.
-
 ---
 
 ## Datasets
